@@ -63,10 +63,6 @@ platforms:
       name: "财联社热门"
     - id: "ifeng"
       name: "凤凰网"
-    - id: "weibo"
-      name: "微博"
-    - id: "douyin"
-      name: "抖音"
 
 
 
@@ -103,9 +99,36 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "hacker-news"
-      name: "Hacker News"
-      url: "https://hnrss.org/frontpage"
+    - id: "zaobao"
+      name: "zaobao"
+      url: "rsshub://zaobao/realtime/world"
+      max_age_days: 2
+
+    - id: "mehrnews"
+      name: "mehrnews"
+      url: "https://en.mehrnews.com/rss"
+      max_age_days: 2
+
+    - id: "tehrantimes"
+      name: "tehrantimes"
+      url: "https://www.tehrantimes.com/rss"
+      max_age_days: 2
+
+    - id: "nytimes"
+      name: "nytimes"
+      url: "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/iran/rss.xml"
+      max_age_days: 2
+
+    - id: "irannewsdaily"
+      name: "irannewsdaily"
+      url: "https://irannewsdaily.com/feed/"
+      max_age_days: 2
+
+
+
+
+
+
 
 
 
@@ -200,7 +223,7 @@ display:
   # 两者共享此处的平台/RSS 配置，但开关互相独立（可只开 AI 分析、不推送展示）
   standalone:
     platforms: ["wallstreetcn-hot","cls-hot"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["hacker-news"] # RSS 源 ID 列表（如 ["hacker-news"]）
+    rss_feeds: ["hacker-news","zaobao","mehrnews","tehrantimes","nytimes","irannewsdaily"] # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 20                     # 每个源最多展示条数（0=不限制）
 
 
