@@ -124,6 +124,18 @@ rss:
       url: "https://irannewsdaily.com/feed/"
       max_age_days: 2
 
+    - id: "aljazeera"
+      name: "aljazeera"
+      url: "https://rsshub.ztyy.dpdns.org/aljazeera/english/news"
+      max_age_days: 2
+
+    - id: "twitter"
+      name: "twitter"
+      url: "rsshub://twitter/keyword/iran"
+      max_age_days: 2
+
+
+
 
 
 
@@ -223,7 +235,7 @@ display:
   # 两者共享此处的平台/RSS 配置，但开关互相独立（可只开 AI 分析、不推送展示）
   standalone:
     platforms: ["wallstreetcn-hot","cls-hot"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["hacker-news","zaobao","mehrnews","tehrantimes","nytimes","irannewsdaily"] # RSS 源 ID 列表（如 ["hacker-news"]）
+    rss_feeds: ["hacker-news","zaobao","mehrnews","tehrantimes","nytimes","irannewsdaily","aljazeera","twitter"] # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 20                     # 每个源最多展示条数（0=不限制）
 
 
