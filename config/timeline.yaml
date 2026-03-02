@@ -187,6 +187,30 @@ presets:
           push: true               # 窗口内只推送一次
 
     # 日计划 ── 把时间段组装成一天的安排
+      morning:
+        name: "早上"
+        start: "07:00"
+        end: "09:00"
+        collect: true
+        analyze: false
+        push: true
+        report_mode: daily
+        ai_mode: daily
+        once:
+          analyze: true
+          push: true
+      afternoon:
+        name: "中午"
+        start: "12:00"
+        end: "01:00"
+        collect: true
+        analyze: false
+        push: true
+        report_mode: daily
+        ai_mode: daily
+        once:
+          analyze: true
+          push: true
     day_plans:
       all_day:
         periods: ["evening_summary"]
