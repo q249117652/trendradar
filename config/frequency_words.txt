@@ -156,15 +156,39 @@
 # ═══════════════════════════════════════════════════════════════
 
 [中国]
-国产
 中国
 
-[北美]
+[美国]
 美国
-加拿大
+突发
+Breaking
 
-/伊朗|iran/ => 伊朗
+/伊朗|Iran/ => 伊朗
 
-印度
-伊朗
-iran
+/以色列|Israel/ => 以色列
+
+/德黑兰|Tehran/ => 德黑兰
+
+/中东|Middle East/ => 中东
+
+突发
+Breaking
+导弹
+Missile
+袭击
+Attack
+Strike
+Strike
+空袭
+Airstrike
+轰炸
+Bombing
+防空
+防空
+Air defense
+核设施
+Nuclear facility
+报复
+Retaliation
+停火
+Ceasefire
