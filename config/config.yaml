@@ -99,40 +99,44 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "yjc"
-      name: "yjc"
-      url: "https://www.yjc.ir/fa/rss/allnews"
-      max_age_days: 3
-
-    - id: "tabnak"
-      name: "tabnak"
-      url: "https://www.tabnak.ir/fa/rss/allnews"
-      max_age_days: 3
-
-    - id: "isna"
-      name: "isna"
-      url: "https://www.isna.ir/rss"
+    - id: "zaobao"
+      name: "zaobao"
+      url: "rsshub://zaobao/realtime/world"
       max_age_days: 3
 
     - id: "mehrnews"
       name: "mehrnews"
-      url: "https://www.mehrnews.com/rss"
+      url: "https://en.mehrnews.com/rss"
       max_age_days: 3
 
-    - id: "khabaronline"
-      name: "khabaronline"
-      url: "https://www.khabaronline.ir/rss"
+    - id: "tehrantimes"
+      name: "tehrantimes"
+      url: "https://www.tehrantimes.com/rss"
       max_age_days: 3
 
-    - id: "tasnimnews"
-      name: "tasnimnews"
-      url: "https://www.tasnimnews.com/fa/rss/feed/0/8/0/%D9%85%D9%87%D9%85%D8%AA%D8%B1%DB%8C%D9%86-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%AA%D8%B3%D9%86%DB%8C%D9%85"
+    - id: "nytimes"
+      name: "nytimes"
+      url: "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/iran/rss.xml"
       max_age_days: 3
 
-    - id: "asriran"
-      name: "asriran"
-      url: "https://www.asriran.com/fa/rss/allnews"
+    - id: "irannewsdaily"
+      name: "irannewsdaily"
+      url: "https://irannewsdaily.com/feed/"
       max_age_days: 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -175,7 +179,7 @@ report:
                                       # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
 
 
-  display_mode: "keyword"             # 分组维度: keyword | platform
+  display_mode: "platform"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
 
@@ -217,10 +221,10 @@ display:
     hotlist: false # 热榜区域（关键词匹配的热点新闻）
     rss: false # RSS 订阅区域
     standalone: false # 独立展示区（完整热榜/RSS，不受关键词过滤）
-    ai_analysis: true # AI 分析区域
+    ai_analysis: false # AI 分析区域
   standalone:
-    platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: [] # RSS 源 ID 列表（如 ["hacker-news"]）
+    platforms: ["zhihu","wallstreetcn-hot","cls-hot","ifeng","thepaper"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feeds: ["zaobao","mehrnews","tehrantimes","nytimes","irannewsdaily"] # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 20                     # 每个源最多展示条数（0=不限制）
 
 
@@ -352,7 +356,7 @@ ai:
   # 完整列表: https://docs.litellm.ai/docs/providers
   # 如果你对于看英文文档比较头疼，那么可以点击页面右下角的 【Ask AI】 ,用中文询问怎么配置 
   
-  model: "qwen/qwen3.5-397b-a17b"
+  model: ""
 
   api_key: ""                       # API Key（建议使用环境变量 AI_API_KEY）
   
