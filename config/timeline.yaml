@@ -190,7 +190,7 @@ presets:
       morning:
         name: "早上"
         start: "07:00"
-        end: "07:00"
+        end: "08:00"
         collect: true
         analyze: true
         push: true
@@ -202,7 +202,7 @@ presets:
       afternoon:
         name: "中午"
         start: "12:00"
-        end: "01:00"
+        end: "13:00"
         collect: true
         analyze: true
         push: true
