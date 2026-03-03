@@ -192,7 +192,7 @@ presets:
         start: "07:00"
         end: "07:00"
         collect: true
-        analyze: false
+        analyze: true
         push: true
         report_mode: daily
         ai_mode: daily
@@ -204,7 +204,7 @@ presets:
         start: "12:00"
         end: "01:00"
         collect: true
-        analyze: false
+        analyze: true
         push: true
         report_mode: daily
         ai_mode: daily
@@ -213,7 +213,7 @@ presets:
           push: true
     day_plans:
       all_day:
-        periods: ["evening_summary"]
+        periods: ["evening_summary", "morning", "afternoon"]
 
     # 周映射 ── 每天用哪个日计划（1=周一 ... 7=周日）
     week_map:
